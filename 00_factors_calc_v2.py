@@ -62,9 +62,6 @@ def num_check(question):
             print(error)
 
 
-# Find square root of interger
-
-
 # Gets factors, returns a sorted list
 def get_factors(to_factor):
 
@@ -72,7 +69,11 @@ def get_factors(to_factor):
     my_list = []
 
     # find factors...
-    for item in range(1, to_factor + 1):
+
+    # get square root of factor (so we know when to end the loop)
+    limit = to_factor ** 0.5
+
+    for item in range(1, limit + 1):
         if to_factor % item == 0:
             my_list.append(item)
             # my_list.append(to_factor)

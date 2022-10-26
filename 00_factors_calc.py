@@ -28,7 +28,7 @@ def instructions():
     print("This program calculates the factors of this interger and then displays them on screen.")
     print("It will also display whether the interger is a prime number or a perfect square.")
     print()
-    print("Complete as many calculaations as necessary, pressing <enter> at the end of each calculation or any key to quit.")
+    print("Complete as many calculations as necessary, pressing <enter> at the end of each calculation or any key to quit.")
     print()
     return ""
 
@@ -69,7 +69,11 @@ def get_factors(to_factor):
     my_list = []
 
     # find factors...
-    for item in range(1, to_factor + 1):
+
+    # get square root of factor (so we know when to end the loop)
+    limit = to_factor ** 0.5
+
+    for item in range(1, limit + 1):
         if to_factor % item == 0:
             my_list.append(item)
             # my_list.append(to_factor)
