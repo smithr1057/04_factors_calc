@@ -23,9 +23,10 @@ def instructions():
 
     statement_generator("Instructions / Information", "=")
     print()
-    print("Please choose a data type (image / text / integer)")
+    print("Enter a interger that is between 1 and 200.")
     print()
-    print("This program asumes that images are being represented in 24 bit colour (ie: 24 bits per pixel). For text, we asume that ascii encoding is being used (8 bits per character).")
+    print("This program calculates the factors of this interger and then displays them on screen.")
+    print("It will also display whether the interger is a prime number or a perfect square.")
     print()
     print("Complete as many calculaations as necessary, pressing <enter> at the end of each calculation or any key to quit.")
     print()
@@ -37,8 +38,8 @@ def num_check(question):
     # Check that users enter a number that is more than zero
     valid = False
     while not valid:
-
-        error = "please enter a number that is more than zero and 200 or under"
+        print()
+        error = "please enter an interger that is more than zero and 200 or under"
 
         try:
         
@@ -79,10 +80,7 @@ def get_factors(to_factor):
     # my_list_len = len(my_list)
 
     # print the sorted list
-    print()
-    print("The factors of {} are:".format(to_factor))
-    print(my_list)
-    print()
+    return(my_list)
 
 
 
@@ -95,7 +93,7 @@ def get_factors(to_factor):
 statement_generator("Factors Calculator", "-")
 
 # Display instructions if user has not used the program before
-first_time = input("Press <enter> to see the instructions or any key to continue ")
+first_time = input("Press <enter> to see the instructions or any key to continue: ")
 print()
 
 if first_time == "":
@@ -130,18 +128,17 @@ while keep_going == "":
 
     # Generate heading...
     if var_to_factor == 1:
-        heading = "One is special..."
+        heading = "One is special"
 
     else:
         heading = "Factors of {}".format(var_to_factor)
                 
     # output factors and comment
     statement_generator(heading, "*")
-    print()
     print(factor_list)
     print(comment)
     
-    
+    print()
     keep_going = input("Press <enter> to continue or any key to quit ")
     print()
 
