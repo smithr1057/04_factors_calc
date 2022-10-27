@@ -1,7 +1,7 @@
-low_num = 0
-high_num = 200
+num = 4
 
-chosen = 4
+# To take the input from the user
+#num = float(input('Enter a number: '))
 
-if low_num <= chosen < high_num:
-    print("Ok")
+num_sqrt = num ** 0.5
+print('The square root of %0.0f is %0.0f'%(num ,num_sqrt))
